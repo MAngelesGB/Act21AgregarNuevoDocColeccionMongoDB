@@ -1,0 +1,40 @@
+/*Estilo para la tabla de la coleccion de MongoDB*/
+
+body{
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+#titulo{
+    padding-top: 10px;
+    padding-left: 228px;
+}
+
+#agregarUsuario{
+    padding-left: 228px;
+    padding-bottom: 20px;
+}
+
+#main-container{
+    display: flex;
+    justify-content: center;
+    margin: 35px auto; 
+    width: 70%; 
+}
+
+table {
+    font-size: 14px;
+    background-color: white;
+    width: 100%;
+    border-collapse: collapse;
+    border: solid black 1px;
+}
+
+td, th{
+    padding: 3.5px;
+    text-align: left;
+    border: solid black 1px;
+}
+
+th{
+    text-align: center;
+}
