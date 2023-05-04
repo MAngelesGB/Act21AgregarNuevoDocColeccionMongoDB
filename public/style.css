@@ -23,18 +23,22 @@ body{
 
 table {
     font-size: 14px;
-    background-color: white;
     width: 100%;
     border-collapse: collapse;
-    border: solid black 1px;
 }
 
 td, th{
-    padding: 3.5px;
-    text-align: left;
-    border: solid black 1px;
+    padding: 7px;
+    text-align: left
 }
 
 th{
     text-align: center;
+    color: white;
+    background-color: #34495E; 
+    border-bottom: solid 2px black;
+}
+
+tr:nth-child(even){
+    background-color: gainsboro;
 }

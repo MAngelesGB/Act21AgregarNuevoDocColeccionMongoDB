@@ -11,21 +11,21 @@ router.get('/usuarios',async (req, res)=>{
 
 //Endpoint para renderizar el formulario de agregar alumnos
 router.get('/addUser', function(req,res){
-    res.render('addUser');
+    res.render('addUser'); 
 });
 
 //Endpoint con metodo POST para agregar un nuevo registro a la bd de MONGO DB Atlas
 router.post('/addUser', function(req,res){
-    const newUser = User ({
+    const newUser = User ({ //permite crear un nuevo documento de la coleccion
         name: req.body.name, 
         email: req.body.email,
         password: req.body.password
     }); 
 
-    newUser
-    .save()
-    .then ((data)=>{res.redirect('/usuarios')})
-    .catch((error)=> {res.json({message:error})});
+    newUser 
+    .save() // retorna una promesa con dos caminos posibles 
+    .then ((data)=>{res.redirect('/usuarios')}) // se ejecuta correctamnte: redirecciona al catalogo
+    .catch((error)=> {res.json({message:error})}); // se ejecuta de manera incorrecta: arroja un mensaje de error
 });
 
 module.exports = router; //Se exporta el routeador
